@@ -1,0 +1,35 @@
+package voltroncocono;
+
+import java.util.Scanner;
+
+public class VoltroncoCono {
+
+
+    public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+        
+            System.out.print("3. Volumen del Tronco del cono regular\n");
+            
+            System.out.print("Ingrese el valor del radio mayor (r1): ");
+            float r1 = 0;
+            r1 = leer.nextFloat();
+            System.out.print("Ingrese el valor del radio menor (r2): ");
+            float r2 = 0;
+            r2 = leer.nextFloat();
+            System.out.print("Ingrese la altura del cono completo (h1): ");
+            float h1 = 0;
+            h1 = leer.nextFloat();
+            System.out.print("Ingrese la altura del cono deficiente o menor (h2): ");
+            float h2 = 0;
+            h2 = leer.nextFloat();
+            double VM, Vm, VT;
+            VM = (Math.PI*r1*r1)*h1/3; //Volumen del cono mayor
+            Vm = (Math.PI*r2*r2)*h2/3; //Volumen del cono menor
+            VT = VM - Vm; //Volumen del tronco
+            System.out.print("1. El Volumen del Cono Completo es: "+VM+" unidades cubicas\n");
+            System.out.print("2. El Volumen del Cono menor es: "+Vm+" unidades cubicas\n");
+            System.out.print("3. El Volumen del tronco del cono es: "+VT+" unidades cubicas\n");
+            
+    }
+    
+}
