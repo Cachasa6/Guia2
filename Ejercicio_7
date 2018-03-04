@@ -1,0 +1,32 @@
+package triangulo;
+
+ import java.util.Scanner;
+
+public class Triangulo {
+    
+
+    public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+        
+            System.out.print("7. Semiperimetro, Area y Circumradius del triangulo\n");
+            
+            System.out.print("Ingrese el valor del primer lado del triangulo (a): ");
+            float a = 0;
+            a = leer.nextFloat();
+            System.out.print("Ingrese el valor del segundo lado del triangulo (b): ");
+            float b = 0;
+            b = leer.nextFloat();
+            System.out.print("Ingrese el valor del tercer lado del triangulo (c): ");
+            float c = 0;
+            c = leer.nextFloat();
+            double S, A, R;
+            S = (a+b+c)/2; //Semiperimetro
+            A = Math.pow(S*(S-a)*(S-b)*(S-c), 0.5);//Area del triangulo con la formula de Heron
+            R = (a*b*c)/(4*Math.PI*A); //Circumradio
+            System.out.print("a. El Sempiperimetro del triangulo es: "+S+" unidades \n");
+            System.out.print("b. El Area del triangulo es: "+A+" unidades cuadradas\n");
+            System.out.print("b. El Circumradius del triangulo es: "+R+" unidades \n");
+            
+    }
+    
+}
