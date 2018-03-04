@@ -1,0 +1,54 @@
+package paseomelgar;
+
+import java.util.Scanner;
+import java.lang.Math;
+
+
+public class Paseomelgar {
+
+    public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+        
+            System.out.print("4. Paseo Melgar\n");
+            
+            System.out.print("Ingrese el numero de estudiantes gordos (G): ");
+            int G = 0;
+            G = leer.nextInt();
+            System.out.print("Ingrese el numero de estudiantes flacos (F): ");
+            int F = 0;
+            F = leer.nextInt();
+            System.out.print("Ingrese el numero de sillas por bus (SB): ");
+            int SB = 0;
+            SB = leer.nextInt();
+            System.out.print("Ingrese el valor de un plato de comida (PC): ");
+            float PC = 0;
+            PC = leer.nextFloat();
+            System.out.print("Ingrese el valor de la habitacion del hotel (PH): ");
+            float PH = 0;
+            PH = leer.nextFloat();
+            System.out.print("Ingrese el numero de personas por habitacion (NH): ");
+            int NH = 0;
+            NH = leer.nextInt();
+            System.out.print("Ingrese el valor del alquiler del bus (AB): ");
+            float AB = 0;
+            AB = leer.nextFloat();
+            System.out.print("Ingrese el numero de dias del paseo (NP): ");
+            int NP = 0;
+            NP = leer.nextInt();
+            double NB, ABT, VC, TH, VHD,VHT;
+            NB=Math.floor((2*G+F)/SB);
+            ABT=2*NB*AB;
+            VC=(5*G+3*F)*PC;
+            TH=G+F;
+            VHD=PH*TH;
+            VHT=NP*VHD;
+            System.out.print("a. El numero de buses que se necesitan es: "+NB+"\n");
+            System.out.print("b. El Valor total del alquiler de los buses es: "+ABT+" pesos\n");
+            System.out.print("c. El Valor a pagar por la comida es: "+VC+" pesos\n");
+            System.out.print("d. El numero de habitaciones a reservar es: "+TH+" pesos\n");
+            System.out.print("e. El Valor a pagar por las habitaciones del hotel es:\n");
+            System.out.print("e1) diario: "+VHD+" pesos\n");
+            System.out.print("e2) total: "+VHT+" pesos\n");      
+    }
+    
+}
