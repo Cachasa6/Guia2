@@ -1,0 +1,30 @@
+package areahexagonoregular;
+
+import java.util.Scanner;
+
+
+public class Areahexagonoregular {
+
+    public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+        
+            System.out.print("6. Area del poligono regular\n");
+            
+            System.out.print("Ingrese el numero de lados (n): ");
+            int n = 0;
+            n = leer.nextInt();
+            System.out.print("Ingrese el valor del lado (L): ");
+            float L = 0;
+            L = leer.nextFloat();
+            System.out.print("Ingrese el valor del apotema (ap): ");
+            float ap = 0;
+            ap = leer.nextFloat();
+            
+            double AH, AP;
+            AP = n*L*ap/2; 
+            AH = 6*L*ap/2;
+            System.out.print("1. El Area del Poligono regular de "+n+" lados es: "+AP+" unidades cuadradas\n");
+            System.out.print("2. El Area del Hexagono regular es: "+AH+" unidades cuadradas\n");
+    }
+    
+}
